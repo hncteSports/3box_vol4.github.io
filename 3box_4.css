@@ -301,6 +301,46 @@ iframe{
   margin: auto;
 }
 
+.guest-card {
+  display: flex;
+  background: #000;       /* 黒背景 */
+  padding: 40px;
+  border-left: 10px solid #005eff;   /* アクセントカラー */
+  align-items: center;
+  gap: 40px;
+  color: #fff;
+  max-width: 1100px;
+  margin: 40px auto;
+}
+
+.guest-photo img {
+  width: 280px;   /* 写真サイズ調整 */
+  border-radius: 8px;
+}
+
+.guest-info {
+  flex: 1;
+}
+
+.guest-name {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #ffe100;  /* タイトル色（画像のピンクに近い） */
+}
+
+.accent-line {
+  width: 650px;
+  height: 4px;
+  background: #005eff;
+  margin-bottom: 20px;
+}
+
+.guest-text {
+  line-height: 1.8;
+  font-size: 18px;
+}
+
+
 
 /* --- レスポンシブ（スマホ・タブレット） --- */
 @media (max-width: 768px) {
@@ -453,5 +493,51 @@ iframe{
   .footer img {
     width: 100px; /* ロゴサイズ調整 */
     height: auto;
+  }
+
+  .guest-card {
+    flex-direction: column;   /* 縦並びにする */
+    text-align: center;        /* 中央寄せ */
+    padding: 20px;
+  }
+
+  .guest-photo img {
+    width: 60%;               /* 画面に合わせて縮小 */
+    max-width: 260px;
+  }
+
+  .guest-name {
+    font-size: 26px;
+  }
+
+  .accent-line {
+    margin: 10px auto 20px;   /* 中央に配置 */
+    width: 100px;
+  }
+
+  .guest-text {
+    font-size: 16px;
+  }
+}
+
+
+/* ===== さらに小さいスマホ（480px以下） ===== */
+@media (max-width: 480px) {
+  .guest-photo img {
+    width: 80%;
+  }
+
+  .guest-name {
+    font-size: 22px;
+  }
+
+  .guest-text {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .guest-card {
+    padding: 15px;
+    gap: 20px;
   }
   }
